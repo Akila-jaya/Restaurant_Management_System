@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="KitchenOrderAnchorPane" prefHeight="620.0" prefWidth="1236.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KitchenOrderController">
+   <children>
+      <TableView fx:id="tblAfterOrder" layoutX="18.0" layoutY="140.0" prefHeight="302.0" prefWidth="647.0" stylesheets="@../Button.css">
+        <columns>
+          <TableColumn fx:id="col2OrderTime" prefWidth="89.0" text="Order Time" />
+          <TableColumn fx:id="col2itemName" prefWidth="155.0" text="Item Name" />
+            <TableColumn fx:id="col2ItemSize" prefWidth="60.0" text="Size" />
+            <TableColumn fx:id="col2OrderQty" prefWidth="77.66668701171875" text="Order Qty" />
+            <TableColumn fx:id="col2WorkerId" prefWidth="84.66668701171875" text="Worker Id" />
+            <TableColumn fx:id="col2OrderId" prefWidth="81.0" text="Order Id" />
+            <TableColumn fx:id="col2ItemCode" prefWidth="97.66668701171875" text="Item Code" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1096.0" layoutY="509.0" onAction="#PrintToKitchenOnAction" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: green;" text="Print To Kitchen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label layoutX="10.0" layoutY="7.0" prefHeight="17.0" prefWidth="55.0" text="Order Id :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblKitchenOrderId" layoutX="70.0" layoutY="8.0" text="O-001">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="78.0" prefHeight="2.0" prefWidth="1204.0" style="-fx-background-color: #830483;" />
+      <TableView fx:id="KitchenItemTabl" layoutX="677.0" layoutY="141.0" prefHeight="302.0" prefWidth="542.0" stylesheets="@../Button.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="80.333251953125" text="K Item Code" />
+            <TableColumn fx:id="colItemName" prefWidth="163.666748046875" text="K Item Name" />
+            <TableColumn fx:id="colSize" prefWidth="60.0" text="Size" />
+            <TableColumn fx:id="colPrice" prefWidth="77.66668701171875" text="Price" />
+            <TableColumn fx:id="colAddToCart" minWidth="0.0" prefWidth="157.66650390625" text="Add To Cart" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="98.0" layoutY="543.0" onAction="#ExitOnAction" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #59004c;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblTime" layoutX="1054.0" layoutY="39.0" prefHeight="17.0" prefWidth="111.0" text="12:13:12" textFill="#260101">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1054.0" layoutY="15.0" prefHeight="17.0" prefWidth="168.0" text="2020/12/31" textFill="#240303">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="677.0" layoutY="99.0" onAction="#txtOnAction" prefHeight="25.0" prefWidth="356.0" promptText="Search Meals" />
+   </children>
+</AnchorPane>

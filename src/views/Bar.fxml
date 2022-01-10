@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="662.0" styleClass="jFX-Button" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BarController">
+   <children>
+      <JFXTextField fx:id="txtDesc" focusColor="#541e50" labelFloat="true" layoutX="21.0" layoutY="232.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Desc" unFocusColor="#380808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtItemName" focusColor="#541e50" labelFloat="true" layoutX="21.0" layoutY="168.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Item Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSize" focusColor="#541e50" labelFloat="true" layoutX="21.0" layoutY="300.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Size" unFocusColor="#380808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPrice" focusColor="#541e50" labelFloat="true" layoutX="21.0" layoutY="369.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Price" unFocusColor="#380808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="BarSaveOnAction" layoutX="472.0" layoutY="109.0" onAction="#BarSaveOnAction" onKeyPressed="#textFields_Key_Released" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: green;" styleClass="Button" stylesheets="@../Button.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="178.0" onAction="#BarUpdateOnAction" prefHeight="41.0" prefWidth="120.0" styleClass="bevel-grey" stylesheets="@../Button.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="249.0" onAction="#DeleteOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #EA2027;" stylesheets="@../Button.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="bevel-grey" />
+         </styleClass>
+      </JFXButton>
+      <AnchorPane layoutX="4.0" layoutY="5.0" prefHeight="53.0" prefWidth="652.0" style="-fx-background-color: #541e50;" stylesheets="@../Button.css">
+         <children>
+            <Label layoutX="25.0" layoutY="11.0" prefHeight="27.0" prefWidth="34.0" text="Bar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtItemCode" focusColor="#541e50" labelFloat="true" layoutX="21.0" layoutY="118.0" onAction="#BarItemCodeSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Item Code">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="662.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+   <children>
+      <JFXButton fx:id="SaveOnAction" layoutX="472.0" layoutY="109.0" onAction="#SaveOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: green;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="474.0" layoutY="391.0" onAction="#DeleteOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: red;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="178.0" onAction="#RefreshOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="249.0" onAction="#UpdateOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="321.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50; -fx-border-radius: 30em;" styleClass="jFX-Button" stylesheets="@../Button.css" text="View Workers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtWorkerId" labelFloat="true" layoutX="21.0" layoutY="104.0" onAction="#WorkerIdSearchOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Worker Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtWorkerName" labelFloat="true" layoutX="21.0" layoutY="173.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Worker Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtWorkerEmail" labelFloat="true" layoutX="21.0" layoutY="240.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Worker E-mail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtWorkerContact" labelFloat="true" layoutX="21.0" layoutY="301.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Worker Contact">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtWorkerType" labelFloat="true" layoutX="21.0" layoutY="359.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Worker Type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane layoutX="4.0" layoutY="5.0" prefHeight="53.0" prefWidth="652.0" style="-fx-background-color: #541e50;" stylesheets="@../Button.css">
+         <children>
+            <Label layoutX="26.0" layoutY="12.0" prefHeight="17.0" prefWidth="93.0" text="Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtWorkerStatus" labelFloat="true" layoutX="20.0" layoutY="419.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="343.0" promptText="Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

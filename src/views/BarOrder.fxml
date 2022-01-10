@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BarOrderAnchorPane" prefHeight="659.0" prefWidth="1286.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BarOrderController">
+   <children>
+      <TableView fx:id="tblBarAddToCart" layoutX="7.0" layoutY="156.0" prefHeight="302.0" prefWidth="653.0" stylesheets="@../Button.css">
+        <columns>
+          <TableColumn fx:id="col2OrderTime" prefWidth="97.0" text="Order Time" />
+          <TableColumn fx:id="colI2temName" prefWidth="138.0" text="Item Name" />
+            <TableColumn fx:id="colI2temSize" prefWidth="87.33331298828125" text="Size" />
+            <TableColumn fx:id="colOrderQty" prefWidth="80.99996948242188" text="Order Qty" />
+            <TableColumn fx:id="colWorkerId" prefWidth="79.3333740234375" text="Worker Id" />
+            <TableColumn fx:id="colOrderId" prefWidth="75.99993896484375" text="Order Id" />
+            <TableColumn fx:id="colI2temCode" prefWidth="95.6666259765625" text="Item Code" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1159.0" layoutY="523.0" onAction="#PrintToBarOnAction" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: green;" text="Print to Bar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label layoutX="4.0" layoutY="7.0" prefHeight="20.0" prefWidth="71.0" style="-fx-background-color: white;" text="Order Id :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblBarOrderId" layoutX="77.0" layoutY="9.0" prefHeight="17.0" prefWidth="47.0" style="-fx-background-color: white;" text="O-001">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Separator layoutX="3.0" layoutY="59.0" prefHeight="3.0" prefWidth="1272.0" style="-fx-background-color: #830483;" />
+      <TableView fx:id="BarItemtbl" layoutX="696.0" layoutY="156.0" prefHeight="302.0" prefWidth="485.0" stylesheets="@../Button.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="80.99996948242188" text="ItemCode" />
+            <TableColumn fx:id="colItemName" prefWidth="79.3333740234375" text="ItemName" />
+            <TableColumn fx:id="colItemSize" prefWidth="138.0" text="Size" />
+            <TableColumn fx:id="colItemPrice" prefWidth="87.33331298828125" text="Price" />
+            <TableColumn fx:id="collAddToCart" prefWidth="95.6666259765625" text="Add To Cart" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="89.0" layoutY="591.0" onAction="#ExitOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #59004c;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="30.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/exit%20purple.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="1151.0" layoutY="18.0" prefHeight="17.0" prefWidth="74.0" text="2020/12/31" textFill="#240303">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1151.0" layoutY="42.0" prefHeight="17.0" prefWidth="129.0" text="12:13:12" textFill="#260101">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBarSearch" labelFloat="true" layoutX="696.0" layoutY="96.0" prefHeight="25.0" prefWidth="429.0" promptText="Search Bar" />
+   </children>
+</AnchorPane>

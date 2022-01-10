@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="489.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <BarChart fx:id="barChart" layoutX="14.0" layoutY="14.0" prefHeight="489.0" prefWidth="662.0" title="Monthly Total Income">
+        <xAxis>
+          <CategoryAxis fx:id="txtDate" label="Monthly" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Total Income" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

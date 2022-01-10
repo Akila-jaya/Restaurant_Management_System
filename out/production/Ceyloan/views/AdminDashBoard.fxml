@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="870.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="5.0" prefHeight="479.0" prefWidth="232.0" style="-fx-background-color: #541e50;" styleClass="Animated" stylesheets="@../Button.css">
+         <children>
+            <JFXButton layoutY="243.0" onAction="#TablesOnAction" prefHeight="46.0" prefWidth="233.0" stylesheets="@../Button.css" text=" Tables" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bevel-grey" />
+                  <String fx:value="Button" />
+               </styleClass></JFXButton>
+            <JFXButton layoutY="291.0" onAction="#MakeSalaryOnAction" prefHeight="46.0" prefWidth="233.0" stylesheets="@../Button.css" text="Make Salary" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="-1.0" layoutY="338.0" onAction="#EmployeeOnAction" prefHeight="46.0" prefWidth="233.0" stylesheets="@../Button.css" text="Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+            <Label fx:id="lblDate" layoutX="2.0" layoutY="13.0" prefHeight="17.0" prefWidth="74.0" text="2020/12/31" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="160.0" layoutY="13.0" prefHeight="17.0" prefWidth="66.0" text="12:13:12" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton layoutY="195.0" onAction="#KitchenItemsOnAction" prefHeight="46.0" prefWidth="233.0" stylesheets="@../Button.css" text=" kithcen items">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bevel-grey" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutY="146.0" onAction="#BarItemonAction" prefHeight="46.0" prefWidth="233.0" ripplerFill="BLACK" stylesheets="@../Button.css" text="Bar items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="-1.0" layoutY="424.0" onAction="#LogOutOnAction" prefHeight="46.0" prefWidth="233.0" stylesheets="@../Button.css" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="28.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-kitchen-tools-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="26.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-bar-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="37.0" layoutX="28.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-restaurant-table-100%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="28.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-salary-male-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="23.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-employee-100%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="37.0" layoutX="30.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-logout-rounded-left-100%20(1).png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="2.0" layoutY="383.0" onAction="#IncomeReportsOnAction" prefHeight="46.0" prefWidth="233.0" ripplerFill="BLACK" stylesheets="@../Button.css" text="Income Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton layoutX="5.0" layoutY="100.0" onAction="#btnBestSellingItems" prefHeight="46.0" prefWidth="233.0" ripplerFill="BLACK" stylesheets="@../Button.css" text="Best Selling Items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="Button" />
+                  <String fx:value="bevel-grey" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AllDashboard" layoutX="237.0" layoutY="-1.0" prefHeight="489.0" prefWidth="671.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="403.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KitchenDeliveryController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="132.0" text="Check boy" />
+   </children>
+</AnchorPane>

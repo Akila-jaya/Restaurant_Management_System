@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="662.0" style="-fx-background-color: white;" styleClass="my-element" stylesheets="@../Button.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableController">
+   <children>
+      <JFXTextField fx:id="txtTableId" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="104.0" onAction="#TableIdSearchOnAction" prefHeight="25.0" prefWidth="343.0" promptText="Table Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTableName" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="173.0" prefHeight="25.0" prefWidth="343.0" promptText="Table Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNumberOfChairs" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="243.0" prefHeight="25.0" prefWidth="343.0" promptText="Number Of Chairs">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtOrderId" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="319.0" prefHeight="25.0" prefWidth="343.0" promptText="Order Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="472.0" layoutY="109.0" onAction="#SaveOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #009432;" stylesheets="@../Button.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jFX-Button" />
+            <String fx:value="my-element" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="178.0" onAction="#UpdateOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="249.0" onAction="#RefreshOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="321.0" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #541e50;" styleClass="jFX-Button" stylesheets="@../Button.css" text="View Table" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="472.0" layoutY="391.0" onAction="#DeleteOnAction" prefHeight="41.0" prefWidth="120.0" style="-fx-background-color: #EA2027;" styleClass="jFX-Button" stylesheets="@../Button.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="4.0" layoutY="5.0" prefHeight="53.0" prefWidth="652.0" style="-fx-background-color: #541e50;" stylesheets="@../Button.css">
+         <children>
+            <Label layoutX="12.0" layoutY="12.0" prefHeight="17.0" prefWidth="92.0" text="Table" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtStatus" focusColor="BLACK" labelFloat="true" layoutX="21.0" layoutY="387.0" prefHeight="25.0" prefWidth="343.0" promptText="Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

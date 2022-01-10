@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="SetDeliveryAnchor" prefHeight="400.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewSetDeliveryBoyController">
+   <children>
+      <TableView fx:id="tblViewDelivery" layoutX="9.0" layoutY="34.0" prefHeight="352.0" prefWidth="676.0" stylesheets="@../Button.css">
+        <columns>
+          <TableColumn fx:id="colWorkerName" prefWidth="129.66665649414062" text="Worker Name" />
+          <TableColumn fx:id="colWorkerCode" prefWidth="96.33334350585938" text="Worker Code" />
+            <TableColumn fx:id="colWorkerContact" prefWidth="129.66665649414062" text="Contact" />
+            <TableColumn fx:id="colWorkerType" prefWidth="109.33331298828125" text="Type" />
+            <TableColumn fx:id="colStatus" prefWidth="99.33331298828125" text="Status" />
+            <TableColumn fx:id="colToInCafe" prefWidth="99.33331298828125" text="To In Cafe" />
+        </columns>
+      </TableView>
+      <Text layoutX="234.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busy Delivery Boys" textAlignment="CENTER" wrappingWidth="212.13671875">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

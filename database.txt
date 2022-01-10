@@ -1,0 +1,263 @@
+
+#mysql -h localhost -p 1234 -u root
+DROP DATABASE IF EXISTS Resturant;
+CREATE DATABASE IF NOT EXISTS Resturant;
+SHOW DATABASES ;
+USE Resturant;
+#-------------------
+
+
+DROP TABLE IF EXISTS Customer;
+CREATE TABLE IF NOT EXISTS Customer(
+    id VARCHAR(15),
+    name VARCHAR(15),
+    address Text,	
+    contact VARCHAR(15),
+    numberPeople Int DEFAULT 0,		
+   
+    CONSTRAINT PRIMARY KEY (id)
+    );
+SHOW TABLES ;
+DESCRIBE Customer;
+
+DROP TABLE IF EXISTS `Order`;
+CREATE TABLE IF NOT EXISTS `Order`(
+    id VARCHAR(15),
+    custId VARCHAR(15)  DEFAULT 'Unknown',
+    oType VARCHAR(15),	
+    oDate VARCHAR(15),
+    oTime VARCHAR(15),		
+   
+    CONSTRAINT PRIMARY KEY (id),
+    CONSTRAINT FOREIGN KEY (custId) REFERENCES Customer(id) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE `Order`;
+
+
+
+
+DROP TABLE IF EXISTS `KitchenOrderDetail`;
+CREATE TABLE IF NOT EXISTS KitchenOrderDetail(
+   orderId VARCHAR(15),
+   orderQty Int,
+   itemName VARCHAR(15),
+   itemCode VARCHAR(15),
+   size  VARCHAR(15),
+   orderTime VARCHAR(15),
+   workerId VARCHAR(15),
+   
+   
+    CONSTRAINT PRIMARY KEY (orderId,itemCode),
+    CONSTRAINT FOREIGN KEY (orderId) REFERENCES `Order`(id) ON DELETE CASCADE ON UPDATE CASCADE,
+
+   CONSTRAINT FOREIGN KEY (itemCode) REFERENCES KitchenItems(code) ON DELETE CASCADE ON UPDATE CASCADE,
+
+  CONSTRAINT FOREIGN KEY (workerId) REFERENCES Worker(id) ON DELETE CASCADE ON UPDATE CASCADE
+
+    );
+
+
+
+DROP TABLE IF EXISTS KitchenItems;
+CREATE TABLE IF NOT EXISTS KitchenItems(
+     code VARCHAR(15),
+     name VARCHAR(15),
+     description VARCHAR(15),
+     size VARCHAR(15),
+     price Int,
+  
+   
+    CONSTRAINT PRIMARY KEY (code)
+ 
+    );
+
+SHOW TABLES ;
+DESCRIBE KitchenItems;
+
+
+#==========================================
+
+
+
+DROP TABLE IF EXISTS Worker;
+CREATE TABLE IF NOT EXISTS Worker(
+    id VARCHAR(15),
+    name VARCHAR(15),
+    type VARCHAR(15),
+    status VARCHAR(15),
+    contact VARCHAR(15),
+    email VARCHAR(15),
+
+    CONSTRAINT PRIMARY KEY (id)
+ 
+    );
+
+SHOW TABLES ;
+DESCRIBE Worker;
+
+
+#===========================================
+
+
+DROP TABLE IF EXISTS customerTable;
+CREATE TABLE IF NOT EXISTS customerTable(
+    id VARCHAR(15),
+    name VARCHAR(15),
+    orderId VARCHAR(15),
+    status VARCHAR(15),
+    noOfChairs VARCHAR(15),
+
+    CONSTRAINT PRIMARY KEY (id)
+ 
+    );
+
+SHOW TABLES ;
+DESCRIBE customerTable;
+
+#=============================================
+
+DROP TABLE IF EXISTS BarOrderDetail;
+CREATE TABLE IF NOT EXISTS BarOrderDetail(
+   orderId VARCHAR(15),
+   orderQty Int,
+   itemName VARCHAR(15),
+   itemCode VARCHAR(15),
+   size  VARCHAR(15),
+   orderTime VARCHAR(15),
+   workerId VARCHAR(15),
+   
+   
+    CONSTRAINT PRIMARY KEY (orderId,itemCode),
+    CONSTRAINT FOREIGN KEY (orderId) REFERENCES `Order`(id) ON DELETE CASCADE ON UPDATE CASCADE,
+
+   CONSTRAINT FOREIGN KEY (itemCode) REFERENCES BarItems(code) ON DELETE CASCADE ON UPDATE CASCADE,
+
+  CONSTRAINT FOREIGN KEY (workerId) REFERENCES Worker(id) ON DELETE CASCADE ON UPDATE CASCADE
+
+    );
+
+#====================================================
+
+
+
+
+DROP TABLE IF EXISTS BarItems;
+CREATE TABLE IF NOT EXISTS BarItems(
+     code VARCHAR(15),
+     name VARCHAR(15),
+     description VARCHAR(15),
+     size VARCHAR(15),
+     price Int,
+  
+   
+    CONSTRAINT PRIMARY KEY (code)
+ 
+    );
+
+SHOW TABLES ;
+DESCRIBE BarItems;
+#========================================================
+
+
+
+DROP TABLE IF EXISTS Users;
+CREATE TABLE IF NOT EXISTS Users(
+     password VARCHAR(15),
+     workerId VARCHAR(15),
+     userName VARCHAR(15),
+     roll VARCHAR(15)
+   
+   
+    );
+
+SHOW TABLES ;
+DESCRIBE Users;
+
+#=======================================================
+
+DROP TABLE IF EXISTS Users;
+CREATE TABLE IF NOT EXISTS Users(
+     password VARCHAR(15),
+     workerId VARCHAR(15),
+     userName VARCHAR(15),
+     roll VARCHAR(15),
+
+ CONSTRAINT FOREIGN KEY (workerId) REFERENCES Worker(id) ON DELETE CASCADE ON UPDATE CASCADE
+
+   
+   
+    );
+
+
+#=======================================================
+
+DROP TABLE IF EXISTS Salary;
+CREATE TABLE IF NOT EXISTS Salary(
+     workerId VARCHAR(15),
+     workingDays Int,
+     perDaySalary DOUBLE,
+    
+ CONSTRAINT FOREIGN KEY (workerId) REFERENCES Worker(id) ON DELETE CASCADE ON UPDATE CASCADE
+
+   
+   
+    );
+
+
+DROP TABLE IF EXISTS CheckOuts;
+CREATE TABLE IF NOT EXISTS CheckOuts(
+     product VARCHAR(15),
+     qty Int(11),
+     price Int(11),
+     total Int(11),
+     date  VARCHAR(15)
+);
+#=============================
+DROP TABLE IF EXISTS Users;
+CREATE TABLE IF NOT EXISTS Users(
+     password VARCHAR(15),
+     user_name VARCHAR(15)
+    
+);
+
+INSERT INTO Users VALUES('1w','Worker');
+INSERT INTO Users VALUES('1a','Admin');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

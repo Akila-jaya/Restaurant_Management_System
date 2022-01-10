@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BarOrderAnchorPane" prefHeight="659.0" prefWidth="1286.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BarOrderController">
+   <children>
+      <TableView fx:id="tblBarAddToCart" layoutX="7.0" layoutY="156.0" prefHeight="302.0" prefWidth="653.0" stylesheets="@../Button.css">
+        <columns>
+          <TableColumn fx:id="col2OrderTime" prefWidth="97.0" text="Order Time" />
+          <TableColumn fx:id="colI2temName" prefWidth="138.0" text="Item Name" />
+            <TableColumn fx:id="colI2temSize" prefWidth="87.33331298828125" text="Size" />
+            <TableColumn fx:id="colOrderQty" prefWidth="80.99996948242188" text="Order Qty" />
+            <TableColumn fx:id="colWorkerId" prefWidth="79.3333740234375" text="Worker Id" />
+            <TableColumn fx:id="colOrderId" prefWidth="75.99993896484375" text="Order Id" />
+            <TableColumn fx:id="colI2temCode" prefWidth="95.6666259765625" text="Item Code" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1159.0" layoutY="523.0" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: green;" text="Print to Bar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label layoutX="4.0" layoutY="7.0" prefHeight="20.0" prefWidth="71.0" style="-fx-background-color: white;" text="Order Id :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="77.0" layoutY="9.0" prefHeight="17.0" prefWidth="23.0" style="-fx-background-color: white;" text="001">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cmbOrderType" labelFloat="true" layoutX="4.0" layoutY="27.0" prefHeight="22.0" prefWidth="163.0" promptText="Order Type" style="-fx-background-color: #bdc3c7;" />
+      <JFXButton fx:id="btnCheckTable" layoutX="819.0" layoutY="26.0" onAction="#CheckTableOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #59004c;" text="Check Table" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnCustomerInfo" layoutX="1053.0" layoutY="26.0" onAction="#CustomerInfoOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #59004c;" text="Customer Info" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeliveryBoy" layoutX="942.0" layoutY="26.0" onAction="#DeliveryBoyOnAction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #59004c;" text="Delivery Boy" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSetWeighter" layoutX="1172.0" layoutY="26.0" onAction="#SetWeighterOnAction" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #59004c;" text="Set Weighter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="3.0" layoutY="59.0" prefHeight="3.0" prefWidth="1272.0" style="-fx-background-color: #830483;" />
+      <TableView fx:id="BarItemtbl" layoutX="696.0" layoutY="156.0" prefHeight="302.0" prefWidth="485.0" stylesheets="@../Button.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="80.99996948242188" text="ItemCode" />
+            <TableColumn fx:id="colItemName" prefWidth="79.3333740234375" text="ItemName" />
+            <TableColumn fx:id="colItemSize" prefWidth="138.0" text="Size" />
+            <TableColumn fx:id="colItemPrice" prefWidth="87.33331298828125" text="Price" />
+            <TableColumn fx:id="collAddToCart" prefWidth="95.6666259765625" text="Add To Cart" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="89.0" layoutY="591.0" onAction="#ExitOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #59004c;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="30.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/exit%20purple.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

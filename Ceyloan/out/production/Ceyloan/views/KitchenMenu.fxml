@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="494.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KitchenMenuController">
+   <children>
+      <TableView layoutY="118.0" prefHeight="366.0" prefWidth="1040.0" stylesheets="@../Button.css">
+        <columns>
+          <TableColumn prefWidth="212.66665649414062" text="k Item Code" />
+          <TableColumn prefWidth="211.33334350585938" text="K Item Name" />
+            <TableColumn prefWidth="210.33331298828125" text="Size" />
+            <TableColumn prefWidth="217.66668701171875" text="Price" />
+            <TableColumn prefWidth="187.33334350585938" text="Add To CArt" />
+        </columns>
+      </TableView>
+      <Label layoutX="10.0" layoutY="18.0" prefHeight="17.0" prefWidth="57.0" text="Order Id :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="18.0" prefHeight="17.0" prefWidth="24.0" text="001">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="952.0" layoutY="12.0" prefHeight="26.0" prefWidth="82.0" text="Kitchen Menu">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="40.0" prefHeight="9.0" prefWidth="1024.0" style="-fx-background-color: F34F31;" />
+   </children>
+</AnchorPane>
